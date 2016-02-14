@@ -136,8 +136,10 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script>
-			var x = document.getElementById("contactform");
-			window.open('mailto:kmanikumarreddy@live.com?subject='+ x[2].value + '&body=' + x[3].value);
+				var x = document.getElementById("contactform");
+				x.onsubmit = function() {
+					window.open('mailto:kmanikumarreddy@live.com?subject='+ x[2].value + '&body=' + x[3].value);
+				};
 			</script>
 			<script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
